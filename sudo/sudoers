@@ -1,0 +1,47 @@
+# sudoers file.
+#
+# This file MUST be edited with the 'visudo' command as root.
+# Failure to use 'visudo' may result in syntax or file permission errors
+# that prevent sudo from running.
+#
+# See the sudoers man page for the details on how to write a sudoers file.
+#
+
+# Host alias specification
+#Host_alias VPS = cnpyt.ru
+
+# User alias specification
+User_Alias ADMINS = cnpyt
+User_Alias PROGRAMMERS = cnpyt
+
+# Cmnd alias specification
+Cmnd_Alias SERVICESMANAGE	= /etc/init.d/privoxy, /etc/init.d/apache2, /etc/init.d/ntp-client, /etc/init.d/mpd, /etc/init.d/cupsd, /etc/init.d/iptables, /etc/init.d/mysql
+Cmnd_Alias NETWORKMANAGE	= /etc/init.d/net.eth0, /etc/init.d/net.ppp0, /sbin/ip
+Cmnd_Alias SOFTMANAGE		= /usr/bin/equery, /usr/bin/emerge, /usr/bin/euse
+Cmnd_Alias POWERMANAGE		= /sbin/shutdown -h now, /sbin/shutdown -r now, /sbin/reboot, /usr/sbin/hibernate-ram
+Cmnd_Alias MOUNTCOM		= /bin/mount /dev/sd* /mnt/flash*
+# Defaults specification
+
+# Runas alias specification
+
+# User privilege specification
+root	ALL=(ALL) ALL
+
+# Uncomment to allow people in group wheel to run all commands
+# %wheel	ALL=(ALL) ALL
+
+# Same thing without a password
+# %wheel	ALL=(ALL) NOPASSWD: ALL
+
+# Samples
+# %users  ALL=/sbin/mount /cdrom,/sbin/umount /cdrom
+# %users localhost=/sbin/shutdown -h now
+
+ADMINS blackbook=NOPASSWD: SERVICESMANAGE
+ADMINS blackbook=NOPASSWD: SOFTMANAGE
+ADMINS blackbook=NOPASSWD: POWERMANAGE
+ADMINS blackbook=NOPASSWD: NETWORKMANAGE
+ADMINS blackbook=NOPASSWD: MOUNTCOM
+ADMINS blackbook=NOPASSWD: sudoedit
+PROGRAMMERS blackbook=NOPASSWD: /etc/init.d/emacs.cnpyt
+ADMINS blackbook=(kvm)NOPASSWD: /usr/bin/kvm
