@@ -1,0 +1,62 @@
+XTerm*faceName: Terminus
+XTerm*faceSize: 12
+! исправляет ошибку с нажатием Alt+F*
+XTerm*modifyFunctionKeys:-1
+! определяет границы выделения при двойном клике
+XTerm*charClass: 33:48,35:48,37-38:48,43-47:48,58:48,61:48,63-64:48,126:48
+! ?
+XTerm*eightBitInput:   true
+! клавиши meta и alt должны отправлять
+! esc-последовательность (полезно в MC)
+XTerm*metaSendsEscape: true
+XTerm*altSendsEscape:  true
+! важная опция - сохраняет содержимое в
+! буфере, даже если выделение снято
+XTerm*keepSelection:   true
+XTerm*bellIsUrgent: true
+XTerm*dynamicColors: on
+! размер лога в строках
+XTerm*saveLines: 5000
+
+XTerm*geometry: 105x35
+
+XTerm*jumpScroll: true
+XTerm*multiScroll: true
+
+! цветовая схема
+!XTerm*color1:  #9e1828
+!XTerm*color9:  #cf6171
+!XTerm*color2:  #30c030
+!XTerm*color10: #c5f779
+!XTerm*color3:  #968a38
+!XTerm*color11: #fff796
+!XTerm*color4:  #404090
+!XTerm*color12: #67CDE9
+!XTerm*color5:  #963c59
+!XTerm*color13: #cf9ebe
+!XTerm*color6:  #418179
+!XTerm*color14: #71bebe
+!XTerm*color7:  #bebebe
+!XTerm*color15: #FFFFFF
+
+!Theme Nine
+XTerm*background: rgb:1a/1a/1a
+XTerm*foreground: rgb:d6/d6/d6
+XTerm*color0:     rgb:00/00/00
+XTerm*color1:     rgb:9e/18/28
+XTerm*color2:     rgb:00/88/00
+XTerm*color3:     rgb:96/8a/38
+XTerm*color4:     rgb:41/41/71
+XTerm*color5:     rgb:96/3c/59
+XTerm*color6:     rgb:41/81/79
+XTerm*color7:     rgb:be/be/be
+XTerm*color8:     rgb:66/66/66
+XTerm*color9:     rgb:cf/61/71
+XTerm*color10     rgb:7c/bc/8c
+XTerm*color11     rgb:ff/f7/96
+XTerm*color12     rgb:41/86/be
+XTerm*color13     rgb:cf/9e/be
+XTerm*color14     rgb:71/be/be
+XTerm*color15:    rgb:ff/ff/ff
+XTerm*cursorColor:#d8d8d8
+
